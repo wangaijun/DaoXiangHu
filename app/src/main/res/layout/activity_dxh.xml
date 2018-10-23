@@ -15,5 +15,96 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
     />
+    <TextView
+            android:text="起步"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_marginEnd="46dp"
+            android:layout_alignTop="@+id/btnPlay" android:id="@+id/textView"
+            style="@style/TagTextStyle"
+            android:layout_marginTop="28dp"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+            android:layout_alignParentBottom="true" android:id="@+id/textView2" android:layout_marginBottom="135dp"
+            style="@style/TagTextStyle"
+            android:text="直行通过路口"/>
+    <TextView
+            android:text="学校"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            style="@style/TagTextStyle"
+            android:layout_alignEnd="@+id/textView2" android:id="@+id/textView3" android:layout_marginTop="109dp"
+            android:layout_marginEnd="56dp"/>
+    <TextView
+            android:text="左转弯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            style="@style/TagTextStyle"
+            android:layout_alignEnd="@+id/textView" android:id="@+id/textView4" android:layout_marginTop="3dp"
+            android:layout_marginEnd="53dp"/>
+    <TextView
+            android:text="会车"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" android:layout_marginEnd="244dp" android:id="@+id/textView5"
+            style="@style/TagTextStyle"
+            android:layout_marginTop="8dp"/>
+    <TextView
+            android:text="直行"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentStart="true"
+            style="@style/TagTextStyle"
+            android:layout_alignBottom="@+id/textView4" android:layout_marginStart="103dp" android:id="@+id/textView6"
+            android:layout_marginBottom="-20dp"/>
+    <TextView
+            android:text="掉头"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignEnd="@+id/btnPlay"
+            style="@style/TagTextStyle"
+            android:layout_alignTop="@+id/textView5" android:id="@+id/textView7" android:layout_marginTop="11dp"
+            android:layout_marginEnd="54dp"/>
+    <TextView
+            android:text="变更车道"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content" android:id="@+id/textView8"
+            style="@style/TagTextStyle"
+            android:layout_above="@+id/textView11" android:layout_toEndOf="@+id/textView7"
+            android:layout_marginStart="-54dp" android:layout_marginBottom="-6dp"/>
+    <TextView
+            android:text="公交站"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" android:layout_marginEnd="279dp" android:id="@+id/textView9"
+            style="@style/TagTextStyle"
+            android:layout_marginTop="104dp"/>
+    <TextView
+            android:text="右转弯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" android:layout_marginEnd="154dp" android:id="@+id/textView10"
+            style="@style/TagTextStyle"
+            android:layout_marginTop="96dp"/>
+    <TextView
+            android:text="超车"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_below="@+id/textView3"
+            style="@style/TagTextStyle"
+            android:layout_alignEnd="@+id/textView9" android:id="@+id/textView11" android:layout_marginTop="6dp"
+            android:layout_marginEnd="-110dp"/>
+    <TextView
+            android:text="人行横道"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignEnd="@+id/textView9"
+            style="@style/TagTextStyle"
+            android:layout_alignParentBottom="true" android:id="@+id/textView12" android:layout_marginBottom="139dp"
+            android:layout_marginEnd="-122dp"/>
+    <TextView
+            android:text="靠边停车"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView13"
+            style="@style/TagTextStyle"
+            android:layout_alignEnd="@+id/textView10" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="78dp"/>
 
 </RelativeLayout>
