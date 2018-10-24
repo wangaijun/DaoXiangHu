@@ -25,8 +25,10 @@ class DXHActivity : Activity() {
                 for (i in arr.indices){
                     val mp = MediaPlayer.create(this@DXHActivity,arr[i])
                     mp.start()
+                    mp.setOnCompletionListener {
+                        it.release()
+                    }
                     Thread.sleep(30000)
-                    mp.release()
                 }
             }
         }.start()
