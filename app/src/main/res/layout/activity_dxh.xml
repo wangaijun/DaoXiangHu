@@ -16,95 +16,134 @@
             android:layout_alignParentBottom="true"
     />
     <TextView
+            android:id="@+id/tv1"
             android:text="起步"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_marginEnd="46dp"
-            android:layout_alignTop="@+id/btnPlay" android:id="@+id/textView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="60dp"
             style="@style/TagTextStyle"
-            android:layout_marginTop="28dp"
     />
     <TextView
+            android:id="@+id/tv2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
-            android:layout_alignParentBottom="true" android:id="@+id/textView2" android:layout_marginBottom="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="240dp"
+            android:layout_marginRight="0dp"
             style="@style/TagTextStyle"
             android:text="直行通过路口"/>
     <TextView
+            android:id="@+id/tv3"
             android:text="学校"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignEnd="@+id/textView2" android:id="@+id/textView3" android:layout_marginTop="109dp"
-            android:layout_marginEnd="56dp"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="70dp"
+    />
     <TextView
+            android:id="@+id/tv4"
             android:text="左转弯"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignEnd="@+id/textView" android:id="@+id/textView4" android:layout_marginTop="3dp"
-            android:layout_marginEnd="53dp"/>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="120dp"
+    />
     <TextView
+            android:id="@+id/tv5"
             android:text="会车"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" android:layout_marginEnd="244dp" android:id="@+id/textView5"
+            android:layout_alignParentTop="true" android:layout_marginEnd="284dp"
             style="@style/TagTextStyle"
             android:layout_marginTop="8dp"/>
     <TextView
+            android:id="@+id/tv6"
             android:text="直行"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:layout_alignParentStart="true"
             style="@style/TagTextStyle"
-            android:layout_alignBottom="@+id/textView4" android:layout_marginStart="103dp" android:id="@+id/textView6"
-            android:layout_marginBottom="-20dp"/>
+            android:layout_alignBottom="@+id/tv4" android:layout_marginStart="118dp"
+            android:layout_marginBottom="-24dp"/>
     <TextView
+            android:id="@+id/tv7"
             android:text="掉头"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignEnd="@+id/btnPlay"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignTop="@+id/textView5" android:id="@+id/textView7" android:layout_marginTop="11dp"
-            android:layout_marginEnd="54dp"/>
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+    />
     <TextView
+            android:id="@+id/tv8"
             android:text="变更车道"
             android:layout_width="83dp"
-            android:layout_height="wrap_content" android:id="@+id/textView8"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_above="@+id/textView11" android:layout_toEndOf="@+id/textView7"
-            android:layout_marginStart="-54dp" android:layout_marginBottom="-6dp"/>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="50dp"
+    />
     <TextView
+            android:id="@+id/tv9"
             android:text="公交站"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" android:layout_marginEnd="279dp" android:id="@+id/textView9"
+            android:layout_alignParentTop="true" android:layout_marginEnd="330dp"
             style="@style/TagTextStyle"
-            android:layout_marginTop="104dp"/>
+            android:layout_marginTop="107dp"/>
     <TextView
+            android:id="@+id/tv10"
             android:text="右转弯"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" android:layout_marginEnd="154dp" android:id="@+id/textView10"
+            android:layout_alignParentTop="true" android:layout_marginEnd="185dp"
             style="@style/TagTextStyle"
-            android:layout_marginTop="96dp"/>
+            android:layout_marginTop="102dp"/>
     <TextView
+            android:id="@+id/tv11"
             android:text="超车"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_below="@+id/textView3"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignEnd="@+id/textView9" android:id="@+id/textView11" android:layout_marginTop="6dp"
-            android:layout_marginEnd="-110dp"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="195dp"
+    />
     <TextView
+            android:id="@+id/tv12"
             android:text="人行横道"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_alignEnd="@+id/textView9"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignParentBottom="true" android:id="@+id/textView12" android:layout_marginBottom="139dp"
-            android:layout_marginEnd="-122dp"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="180dp"
+    />
     <TextView
+            android:id="@+id/tv13"
             android:text="靠边停车"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView13"
+            android:layout_height="wrap_content"
             style="@style/TagTextStyle"
-            android:layout_alignEnd="@+id/textView10" android:layout_alignParentBottom="true"
-            android:layout_marginBottom="78dp"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="85dp"
+            android:layout_marginRight="175dp"
+    />
 
 </RelativeLayout>
