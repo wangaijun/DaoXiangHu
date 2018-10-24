@@ -5,17 +5,21 @@ import android.app.AlertDialog
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import android.widget.PopupMenu
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dxh.*
 
 class DXHActivity : Activity() {
-
+    private lateinit var menu:PopupMenu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dxh)
 
+        menu = PopupMenu(this, btnPlay)
+        menu.
         btnPlay.setOnClickListener {
-            playMp3()
+            menu.show()
+//            playMp3()
         }
     }
 
