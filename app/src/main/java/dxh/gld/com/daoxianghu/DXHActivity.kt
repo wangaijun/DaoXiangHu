@@ -6,20 +6,35 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.PopupMenu
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dxh.*
 
 class DXHActivity : Activity() {
-    private lateinit var menu:PopupMenu
+    private lateinit var popupMenu:PopupMenu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dxh)
 
-        menu = PopupMenu(this, btnPlay)
-        menu.
+        popupMenu = PopupMenu(this, btnPlay)
+        popupMenu.inflate(R.menu.pop_menu_items)
+
+        popupMenu.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.items->playMp3()
+                R.id.record->playRecord()
+            }
+            return@setOnMenuItemClickListener true
+        }
+
         btnPlay.setOnClickListener {
-            menu.show()
-//            playMp3()
+            popupMenu.show()
+        }
+    }
+
+    private fun playRecord() {
+        val mp = MediaPlayer.create(this,R.raw.record)
+        mp.start()
+        mp.setOnCompletionListener {
+            it.release()
         }
     }
 
