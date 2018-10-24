@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.PopupMenu
 import kotlinx.android.synthetic.main.activity_dxh.*
 
@@ -12,6 +13,9 @@ class DXHActivity : Activity() {
     private lateinit var popupMenu:PopupMenu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setContentView(R.layout.activity_dxh)
 
         popupMenu = PopupMenu(this, btnPlay)
