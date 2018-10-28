@@ -25,12 +25,21 @@ class DXHActivity : Activity() {
             when(it.itemId){
                 R.id.items->playMp3()
                 R.id.record->playRecord()
+                R.id.roadOneBeforeTest->playRoadOneBeforeTest()
             }
             return@setOnMenuItemClickListener true
         }
 
         btnPlay.setOnClickListener {
             popupMenu.show()
+        }
+    }
+
+    private fun playRoadOneBeforeTest() {
+        val mp = MediaPlayer.create(this,R.raw.road_one_before_test)
+        mp.start()
+        mp.setOnCompletionListener {
+            it.release()
         }
     }
 
