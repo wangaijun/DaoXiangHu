@@ -74,13 +74,13 @@ class DXHActivity : Activity() {
             R.id.tv4->toast("打灯，踩刹车")
             R.id.tv5->toast("踩刹车")
             R.id.tv6->toast("直线，35左右")
-            R.id.tv7->toast("打灯，踩刹车，看直行车")
+            R.id.tv7->toast("打灯，踩刹车，换到1档，看直行车")
             R.id.tv8->toast("打右灯")
-            R.id.tv9->toast("过指示牌30米，黄漆处，踩刹车，30以内")
+            R.id.tv9->toast("踩刹车，30以内")
             R.id.tv10->toast("打右灯，踩刹车，减至两档")
-            R.id.tv11->toast("打左灯，直行，打右灯")
+            R.id.tv11->toast("打左灯，直行，关左灯")
             R.id.tv12->toast("踩刹车")
-            R.id.tv13->toast("打右灯，踩刹车，对白块，停车，拉手刹，挂空挡，松离合、脚刹，开门，关门，考官签字")
+            R.id.tv13->toast("打右灯，踩刹车，对白块内10公分，停车，拉手刹，挂空挡，松离合、松脚刹，开门，关门，考官签字")
         }
     }
 
