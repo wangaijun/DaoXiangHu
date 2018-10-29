@@ -76,17 +76,20 @@ class DXHActivity : Activity() {
         ctrBar.visibility = View.VISIBLE
         object : Thread() {
             override fun run() {
-                while (true) {
-                    val cur = mp.currentPosition
-                    val total = mp.duration
-                    seekBar.post {
-                        seekBar.max = total
-                        seekBar.progress = cur
+                try {
+                    while (true) {
+                        val cur = mp.currentPosition
+                        val total = mp.duration
+                        seekBar.post {
+                            seekBar.max = total
+                            seekBar.progress = cur
+                        }
+                        if (cur >= total) {
+                            break
+                        }
+                        Thread.sleep(100)
                     }
-                    if (cur >= total) {
-                        break
-                    }
-                    Thread.sleep(100)
+                } catch (e: Exception) {
                 }
             }
         }.start()
