@@ -35,22 +35,39 @@ class DXHActivity : Activity() {
         }
     }
 
+    private fun playOrPause(mp:MediaPlayer) {
+        if (btnPlayOrPause.text=="播放"){
+            mp.start()
+            btnPlayOrPause.text="暂停"
+        }else{
+            mp.pause()
+            btnPlayOrPause.text="播放"
+        }
+    }
+
     private fun playRoadOneBeforeTest() {
         val mp = MediaPlayer.create(this,R.raw.road_one_before_test)
         mp.start()
         mp.setOnCompletionListener {
             it.release()
         }
-        object:Thread(){
+        updateSeekBar(mp)
+        btnPlayOrPause.setOnClickListener {
+            playOrPause(mp)
+        }
+    }
+
+    private fun updateSeekBar(mp: MediaPlayer) {
+        object : Thread() {
             override fun run() {
-                while(true){
+                while (true) {
                     val cur = mp.currentPosition
                     val total = mp.duration
                     seekBar.post {
                         seekBar.max = total
                         seekBar.progress = cur
                     }
-                    if (!mp.isPlaying || cur>=total){
+                    if (cur >= total) {
                         break
                     }
                 }
@@ -63,6 +80,10 @@ class DXHActivity : Activity() {
         mp.start()
         mp.setOnCompletionListener {
             it.release()
+        }
+        updateSeekBar(mp)
+        btnPlayOrPause.setOnClickListener {
+            playOrPause(mp)
         }
     }
 
