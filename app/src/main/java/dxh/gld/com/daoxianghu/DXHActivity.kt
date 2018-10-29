@@ -41,6 +41,21 @@ class DXHActivity : Activity() {
         mp.setOnCompletionListener {
             it.release()
         }
+        object:Thread(){
+            override fun run() {
+                while(true){
+                    val cur = mp.currentPosition
+                    val total = mp.duration
+                    seekBar.post {
+                        seekBar.max = total
+                        seekBar.progress = cur
+                    }
+                    if (!mp.isPlaying || cur>=total){
+                        break
+                    }
+                }
+            }
+        }.start()
     }
 
     private fun playRecord() {
