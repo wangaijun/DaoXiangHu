@@ -48,16 +48,32 @@ class DXHActivity : Activity() {
     private fun playRoadOneBeforeTest() {
         val mp = MediaPlayer.create(this,R.raw.road_one_before_test)
         mp.start()
-        mp.setOnCompletionListener {
-            it.release()
-        }
+        playCompleted(mp)
         updateSeekBar(mp)
         btnPlayOrPause.setOnClickListener {
             playOrPause(mp)
         }
     }
 
+    private fun playRecord() {
+        val mp = MediaPlayer.create(this,R.raw.record)
+        mp.start()
+        playCompleted(mp)
+        updateSeekBar(mp)
+        btnPlayOrPause.setOnClickListener {
+            playOrPause(mp)
+        }
+    }
+
+    private fun playCompleted(mp: MediaPlayer) {
+        mp.setOnCompletionListener {
+            it.release()
+            ctrBar.visibility = View.GONE
+        }
+    }
+
     private fun updateSeekBar(mp: MediaPlayer) {
+        ctrBar.visibility = View.VISIBLE
         object : Thread() {
             override fun run() {
                 while (true) {
@@ -70,21 +86,10 @@ class DXHActivity : Activity() {
                     if (cur >= total) {
                         break
                     }
+                    Thread.sleep(100)
                 }
             }
         }.start()
-    }
-
-    private fun playRecord() {
-        val mp = MediaPlayer.create(this,R.raw.record)
-        mp.start()
-        mp.setOnCompletionListener {
-            it.release()
-        }
-        updateSeekBar(mp)
-        btnPlayOrPause.setOnClickListener {
-            playOrPause(mp)
-        }
     }
 
     private fun playMp3() {
